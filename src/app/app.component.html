@@ -1,0 +1,14 @@
+<!-- <router-outlet></router-outlet> -->.
+<h1 style="text-align: center;">Welcome to Programming Contenst</h1>
+<div  *ngFor="let item of data" style="border: 2px solid black; padding: 20px; display: inline-block; margin: 20px;">
+  <ul>
+    <li>{{item.name}}</li>
+    <li><img [src]="item.url" alt="{{item.url}}"></li>
+    <li>{{item.site}}</li>
+    <li>{{item.start_time}}</li>
+    <li>{{item.end_time}}</li>
+    <li>{{item.duration}}</li>
+    <li>{{item.status}}</li>
+    <li>{{item.in_24_hours}}</li>
+  </ul>
+</div>
