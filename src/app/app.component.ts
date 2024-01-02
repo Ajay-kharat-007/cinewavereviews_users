@@ -1,19 +1,18 @@
-import { HttpClient } from '@angular/common/http';
 import { Component } from '@angular/core';
+import { ToastrService } from 'ngx-toastr';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrl: './app.component.scss'
 })
 export class AppComponent {
-  title = 'shivneri_nagar';
-  data:any
-  constructor(private http: HttpClient) {
+  title = 'angular_portfolio';
 
-    this.http.get('https://kontests.net/api/v1/all').subscribe((res:any)=>{
-      this.data = res
-      console.log(res)
-    })
+  constructor(private toastr: ToastrService) { }
+
+  button(){
+    this.toastr.success("The toastr is working perfectly")
   }
+
 }
